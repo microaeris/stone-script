@@ -1,7 +1,7 @@
 
 // Pet Snow Bunny
 // by: aeris
-// v1.0
+// v1.1
 
 
 var bunnyColor
@@ -81,11 +81,12 @@ lastPlayerZ = pos.z
 
 // Draw
 
+
 ?currentState = stateIdle
   >o@myX@,@myZ@,@bunnyColor@,ascii
 #
 ###(\(\
-##( n.n)
+##( -.-)
 o(,`_"_)
 asciiend
   x = myX + 4
@@ -102,26 +103,26 @@ asciiend
 
     ?time % 4 <= 1
       >o@x@,@y@,@bunnyColor@,ascii
-n.n
+-.-
   *
 asciiend
     ?time % 4 > 1
       >o@x@,@y@,@bunnyColor@,ascii
-n.n
+-.-
   *
 asciiend
 
   :?stateTime % 50 >= 48
     >o@x@,@y@,@bunnyColor@,ascii
-n.n
+-.-
 asciiend
   :?stateTime % 50 >= 46
     >o@x@,@y@,@bunnyColor@,ascii
--.-
+ _
 asciiend
   :?stateTime % 50 >= 44
     >o@x@,@y@,@bunnyColor@,ascii
--.-
+ _
 asciiend
 
 ?currentState = stateJump
@@ -129,7 +130,7 @@ asciiend
     >o@myX@,@myZ@,@bunnyColor@,ascii
 #
 ####(\(\
-#o__( n.n)
+#o__( -.-)
 ,/ _'| "|
 asciiend
 
@@ -137,21 +138,21 @@ asciiend
     >o@myX@,@myZ@,@bunnyColor@,ascii
 #
 ####(\(\
-#o__( n.n)
+#o__( -.-)
 ##\_'/_"/
 asciiend
 
   :?stateTime/2 = 2
     >o@myX@,@myZ@,@bunnyColor@,ascii
 #
-###/( n.n)
+###/( -.-)
 #o,- \ " \
 #|_.-  " "
 asciiend
 
   :?stateTime/2 = 3
     >o@myX@,@myZ@,@bunnyColor@,ascii
-###/( n.n)
+###/( -.-)
 #o,-' \" \
 ,/_.-'  " "
 #
@@ -160,7 +161,7 @@ asciiend
   :?stateTime/2 = 4
     >o@myX@,@myZ@,@bunnyColor@,ascii
 ####\ \\
-#o--( n.n)
+#o--( -.-)
 = __' \" \
 ########" "
 asciiend
@@ -169,6 +170,6 @@ asciiend
     >o@myX@,@myZ@,@bunnyColor@,ascii
 #
 ##o_ \ \\
-=_,  ( n.n)
+=_,  ( -.-)
 ###`-' \" \
 asciiend
