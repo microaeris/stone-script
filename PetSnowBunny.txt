@@ -7,7 +7,7 @@
 var bunnyColor
 bunnyColor = #white
 
-var keepDistance = -17
+var keepDistance = -18
 var maxX = -11
 
 var maxDistance
@@ -31,7 +31,7 @@ var stateTime = 0
 
 func SetState(newState)
   ?newState = stateJump
-    play bunny
+    play scout_wing
 
   currentState = newState
   stateTime = 0
@@ -81,48 +81,23 @@ lastPlayerZ = pos.z
 
 // Draw
 
-
 ?currentState = stateIdle
   >o@myX@,@myZ@,@bunnyColor@,ascii
 #
-###(\(\
-##( -.-)
-o(,`_"_)
+#####(\(\
+####( n.n)
+##o(,`_"_)
 asciiend
-  x = myX + 4
+  x = myX + 6
   y = myZ + 2
   ?face = "( ^^"
     >o@x@,@y@,@bunnyColor@,ascii
-,^^
- '=
+^.^
 asciiend
 
-  :?face = "Â°Â°"
-    ?time % 10 = 0 & myX > keepDistance
-      myX--
-
-    ?time % 4 <= 1
-      >o@x@,@y@,@bunnyColor@,ascii
--.-
-  *
-asciiend
-    ?time % 4 > 1
-      >o@x@,@y@,@bunnyColor@,ascii
--.-
-  *
-asciiend
-
-  :?stateTime % 50 >= 48
-    >o@x@,@y@,@bunnyColor@,ascii
--.-
-asciiend
-  :?stateTime % 50 >= 46
-    >o@x@,@y@,@bunnyColor@,ascii
- _
-asciiend
   :?stateTime % 50 >= 44
     >o@x@,@y@,@bunnyColor@,ascii
- _
+-.-
 asciiend
 
 ?currentState = stateJump
@@ -130,7 +105,7 @@ asciiend
     >o@myX@,@myZ@,@bunnyColor@,ascii
 #
 ####(\(\
-#o__( -.-)
+#o__( n.n)
 ,/ _'| "|
 asciiend
 
@@ -138,21 +113,21 @@ asciiend
     >o@myX@,@myZ@,@bunnyColor@,ascii
 #
 ####(\(\
-#o__( -.-)
+#o__( n.n)
 ##\_'/_"/
 asciiend
 
   :?stateTime/2 = 2
     >o@myX@,@myZ@,@bunnyColor@,ascii
 #
-###/( -.-)
+###/( n.n)
 #o,- \ " \
 #|_.-  " "
 asciiend
 
   :?stateTime/2 = 3
     >o@myX@,@myZ@,@bunnyColor@,ascii
-###/( -.-)
+###/( n.n)
 #o,-' \" \
 ,/_.-'  " "
 #
@@ -161,7 +136,7 @@ asciiend
   :?stateTime/2 = 4
     >o@myX@,@myZ@,@bunnyColor@,ascii
 ####\ \\
-#o--( -.-)
+#o--( n.n)
 = __' \" \
 ########" "
 asciiend
@@ -170,6 +145,6 @@ asciiend
     >o@myX@,@myZ@,@bunnyColor@,ascii
 #
 ##o_ \ \\
-=_,  ( -.-)
+=_,  ( n.n)
 ###`-' \" \
 asciiend
